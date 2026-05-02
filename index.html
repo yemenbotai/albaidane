@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشبل البيضاني - أحمد ناصر الحمري | محتوى ديني</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(rgba(26, 26, 58, 0.88), rgba(45, 27, 78, 0.92)), url('background-islamic.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #E8D5A3;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* الهيدر الملكي مع الصورة */
+        .hero {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(12px);
+            border-radius: 60px 60px 40px 40px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(201, 160, 61, 0.5);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 4px solid #C9A03D;
+            overflow: hidden;
+            background: #2D1B4E;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #F3E5AB, #C9A03D);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            background: rgba(201, 160, 61, 0.2);
+            display: inline-block;
+            padding: 0.3rem 1.8rem;
+            border-radius: 40px;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(201, 160, 61, 0.5);
+        }
+
+        .real-name {
+            font-size: 1.1rem;
+            color: #D4C28C;
+            margin: 0.5rem 0;
+        }
+
+        .divider {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #C9A03D, #F3E5AB, #C9A03D, transparent);
+            margin: 1rem auto;
+            border-radius: 4px;
+        }
+
+        /* شبكة الروابط */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 2.5rem 0;
+        }
+
+        .card {
+            background: rgba(10, 8, 25, 0.7);
+            backdrop-filter: blur(12px);
+            border-radius: 32px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(201, 160, 61, 0.3);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(30, 20, 60, 0.85);
+            border-color: #C9A03D;
+        }
+
+        /* أيقونات التواصل الاجتماعية */
+        .card-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            transition: 0.2s;
+        }
+
+        .card:hover .card-icon {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: #F3E5AB;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-bottom: 1.2rem;
+        }
+
+        /* صورة معاينة يوتيوب داخل البطاقة */
+        .youtube-preview-img {
+            width: 100%;
+            border-radius: 20px;
+            margin: 0.8rem 0;
+            border: 2px solid rgba(201,160,61,0.5);
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #C9A03D, #A67C1E);
+            color: #1A1A2E;
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+            margin-top: 0.5rem;
+            font-family: 'Cairo', sans-serif;
+            cursor: pointer;
+        }
+
+        .btn-link:hover {
+            background: #D4AF37;
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .whatsapp-card .btn-link {
+            background: linear-gradient(135deg, #075E54, #128C7E);
+            color: #F3E5AB;
+        }
+        .whatsapp-card .btn-link:hover {
+            background: #25D366;
+            color: #075E54;
+        }
+
+        .quote-section {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 40px;
+            padding: 1.8rem;
+            text-align: center;
+            margin: 2rem 0;
+            border-right: 6px solid #C9A03D;
+            backdrop-filter: blur(4px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(201,160,61,0.3);
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #C9A03D;
+            color: #1A1A3A;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 99;
+            box-shadow: 0 4px 12px black;
+        }
+
+        .scroll-top:hover {
+            background: #D4AF37;
+        }
+
+        @media (max-width: 650px) {
+            h1 { font-size: 1.8rem; }
+            .card-icon { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="scroll-top" id="scrollTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+<div class="container">
+    <!-- الهيدر مع صورة أحمد -->
+    <div class="hero">
+        <div class="avatar">
+            <img src="albaidane-avatar.jpg" alt="أحمد ناصر الحمري - الشبل البيضاني" onerror="this.src='https://via.placeholder.com/150?text=Ahmed'">
+        </div>
+        <h1><i class="fas fa-crown"></i> الشبل البيضاني <i class="fas fa-crown"></i></h1>
+        <div class="tagline">
+            <i class="fas fa-star-and-crescent"></i> صانع محتوى ديني <i class="fas fa-star-and-crescent"></i>
+        </div>
+        <div class="real-name">
+            <i class="fas fa-feather-alt"></i> أحمد ناصر الحمري
+        </div>
+        <div class="divider"></div>
+    </div>
+
+    <!-- شبكة وسائل التواصل مع أيقونات -->
+    <div class="links-grid">
+        <!-- يوتيوب -->
+        <div class="card">
+            <div class="card-icon"><i class="fab fa-youtube" style="color: #FF0000;"></i></div>
+            <h3>يوتيوب</h3>
+            <img src="youtube-preview.jpg" alt="معاينة قناة اليوتيوب" class="youtube-preview-img" onerror="this.style.display='none'">
+            <p>قناة الشبل البيضاني - اشترك الآن</p>
+            <a href="https://youtube.com/@albaidane?si=zZ0WN7hGUBOzP_Gh" class="btn-link" target="_blank"><i class="fab fa-youtube"></i> اشترك الآن</a>
+        </div>
+
+        <!-- فيسبوك -->
+        <div class="card">
+            <div class="card-icon"><i class="fab fa-facebook" style="color: #1877F2;"></i></div>
+            <h3>فيسبوك</h3>
+            <p>صفحة الشبل البيضاني - منشورات دينية</p>
+            <a href="https://www.facebook.com/albaidane?mibextid=ZbWKwL" class="btn-link" target="_blank"><i class="fab fa-facebook-f"></i> تابع الصفحة</a>
+        </div>
+
+        <!-- تيك توك -->
+        <div class="card">
+            <div class="card-icon"><i class="fab fa-tiktok" style="color: #69C9D0;"></i></div>
+            <h3>تيك توك</h3>
+            <p>مقاطع قصيرة هادفة</p>
+            <a href="https://www.tiktok.com/@albaidane?_r=1&_d=em1gma9l37gcib" class="btn-link" target="_blank"><i class="fab fa-tiktok"></i> تابعني</a>
+        </div>
+
+        <!-- انستقرام -->
+        <div class="card">
+            <div class="card-icon"><i class="fab fa-instagram" style="color: #E4405F;"></i></div>
+            <h3>انستقرام</h3>
+            <p>صور وفيديوهات قصيرة</p>
+            <a href="https://www.instagram.com/albaidane1?igsh=MWY0amFnb254YmNyOQ==" class="btn-link" target="_blank"><i class="fab fa-instagram"></i> متابعة</a>
+        </div>
+
+        <!-- واتساب -->
+        <div class="card whatsapp-card">
+            <div class="card-icon"><i class="fab fa-whatsapp" style="color: #25D366;"></i></div>
+            <h3>واتساب</h3>
+            <p>للتواصل المباشر: 779313305</p>
+            <a href="https://wa.me/967779313305?text=السلام%20عليكم%20أحمد" class="btn-link" target="_blank"><i class="fab fa-whatsapp"></i> راسلنا</a>
+        </div>
+
+        <!-- نسخ الروابط -->
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-share-alt" style="color: #C9A03D;"></i></div>
+            <h3>جميع المنصات</h3>
+            <p>انسخ روابط الشبل البيضاني</p>
+            <button id="copyAllLinksBtn" class="btn-link"><i class="fas fa-copy"></i> نسخ الروابط</button>
+        </div>
+    </div>
+
+    <div class="quote-section">
+        <i class="fas fa-quote-right" style="font-size: 2rem; opacity: 0.5;"></i>
+        <div class="quote-text" style="font-size: 1.2rem;">مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ</div>
+        <div style="margin-top: 8px;">— رواه مسلم</div>
+        <i class="fas fa-quote-left" style="font-size: 2rem; opacity: 0.5;"></i>
+    </div>
+
+    <div class="footer">
+        <p><i class="fas fa-crown"></i> الشبل البيضاني - أحمد ناصر الحمري <i class="fas fa-crown"></i></p>
+        <p>صانع محتوى ديني | تابعني لنشر الخير</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('copyAllLinksBtn')?.addEventListener('click', () => {
+        const links = `YouTube: https://youtube.com/@albaidane\nFacebook: https://www.facebook.com/albaidane\nTikTok: https://www.tiktok.com/@albaidane\nInstagram: https://www.instagram.com/albaidane1\nWhatsApp: 779313305`;
+        navigator.clipboard.writeText(links).then(() => alert('✅ تم نسخ جميع الروابط!'));
+    });
+
+    document.getElementById('scrollTopBtn')?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
